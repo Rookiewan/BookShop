@@ -1,0 +1,42 @@
+/* CSS Document */
+.header-bottom{
+height:80px;
+}
+hr{
+border:1px solid #bbb;
+}
+.title{
+width:85%;
+margin:auto;
+margin-top:20px;
+font-size:20px;
+color:#333;
+border-bottom:1px dotted #333;
+padding-bottom:10px;
+}
+.inf1,.inf2{
+margin:40px 0 0 100px;
+width:400px;
+height:30px;
+font-size:18px;
+color:#333;
+float:left;
+}
+.inf1{
+margin-left:200px;
+}
+.submit{
+background:#333333;
+color:#FFFFFF;
+border:none;
+font-size:18px;
+float:left;
+width:100px;
+height:30px;
+cursor:pointer;
+margin:30px 0 0 200px;
+}
+
+.footer{
+margin-top:30px;
+}

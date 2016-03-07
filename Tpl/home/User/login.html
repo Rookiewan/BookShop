@@ -1,0 +1,38 @@
+
+{extends file='public/layout.html'}
+
+{block name='style'}
+<link href = "{$smarty.const.CSS_URL}login.css" rel = "stylesheet" type = "text/css">
+{/block}
+{block name='main'}
+  </div>
+  </div>
+		 
+  		<hr/>
+		<div class = "register">
+			<h4 class = "title">注册</h4>
+			<div class = "register-text">欢迎进入智慧百屋！如果想要购买书籍请先登录账号</p>如果没有账号请您
+
+注册！</div>
+			<a class = "register-submit"  href="{$smarty.const.__GROUP__}/User/register">注册</a>
+		</div>
+		<div class = "login">
+			<h4 class = "title">登录</h4>
+			
+			<div class ="user">
+				<div class = "pic"></div>
+				<input class ="text" type = "text" value="" placeholder = "账号">
+			</div>
+			<div class ="psw">
+				<div class = "pic"></div>
+				<input class = "text" type="password" value="" placeholder = "密码">
+			</div>
+			<div class="remember">忘记密码</div>
+			<input class = "submit" type="button" value = "登录">
+			
+		</div>
+{/block}
+
+{block name='js'}
+<script src='{$smarty.const.JS_URL}userLogin.js'></script>
+{/block}

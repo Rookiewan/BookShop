@@ -1,0 +1,91 @@
+{extends file='public/layout.html'}
+{block name='style'}
+<link href = "{$smarty.const.CSS_URL}detail.css" rel = "stylesheet" type = "text/css">
+{/block}
+{block name='main'}
+	 <div class = "header-bottom-right">
+	    <div class = "search">
+		   <input type = "text" name="" class ="textbox" placeholder="Search">
+		   <input type = "submit" name = "" class = "submit" value ="">
+		</div>
+		<div class = "icon"><img src="{$smarty.const.IMG_URL}cart.png"></div>
+	    <div class = "cart buy-cart"><a href = "##">购物车(<span class='buy-cart-count'>0</span>)</a></div>
+		<div class = "icon"><img src="{$smarty.const.IMG_URL}tag.png"></div>
+		<div class = "cart buy-user"><a href = "##">我的账户</a></div>
+	 </div>
+	 <div class = "clear"></div>
+  </div>
+  </div>
+  
+  		<div class = "main">
+		<!-------------------------main-left------------------begin--------------->
+			<div class = "main-left">
+				<div>
+					<div class="box">
+						<div class="tb-booth tb-pic tb-s310"> 
+							<a href="{$smarty.const.IMG_URL}details/02_big.jpg"><img src="{$smarty.const.IMG_URL}details/02_mid.jpg" rel="{$smarty.const.IMG_URL}details/02_big.jpg" class="jqzoom" /></a>
+						</div>
+						<ul class="tb-thumb" id="thumblist">
+							<li class="tb-selected">
+								<div >
+									<a href="#"><img src="{$smarty.const.IMG_URL}details/{$bookInfo.bimage}/{$bookInfo.bimage}_small.jpg" mid="{$smarty.const.IMG_URL}details/{$bookInfo.bimage}/{$bookInfo.bimage}_mid.jpg" big="{$smarty.const.IMG_URL}details/{$bookInfo.bimage}/{$bookInfo.bimage}_big.jpg"></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class = "intro">
+						<div class = "name">{$bookInfo.bname}</div>
+						<div class = "text">价&nbsp;格<span class = "price">&yen;{$bookInfo.bnowprice}</span></div>
+						<div class = "text">评&nbsp;论<span class = "comment">{$commentNum} 条评论</span></div>
+						<div class = "text">作&nbsp;者<span class = "author">{$bookInfo.bauthor}</span></div>
+						<div class = "text">出版社<span class = "publish_house">{$bookInfo.bpublic}</span></div>
+						<div class = "text">出版时间<span class = "publish_time">{$bookInfo.bpublictime}</span></div>
+						<div class = "text">所属分类<span class = "cago">{$bookInfo.btype}</span></div>
+						<div class = "text">我要买&nbsp;&nbsp;<span class = "count"><span class='down__'>-</span><input name='buycount' type='text' value='1'><span class='up__'>+</span></span><span class='countLeft'>库存 {$bookInfo.bcount}</span></div>
+						<input type="button" value="加入购物车" class= "buy">
+						<input type='hidden' name='bid' value='{$bookInfo.bid}'>
+					</div>
+				</div>
+				<div class = "clear"></div>
+				
+				<div class = "book_detail">
+					<ul class = "title">
+						<li class = "style1" >商品详情</li>
+						<li class = "style2" ><a href="#1">商品评论</a></li>
+					</ul>
+					<div class = "Intro">作者简介<p>{$bookInfo.bauthorI}</p></div>
+					<div class = "Intro">内容简介<p>{$bookInfo.bcontent}</p></div>
+					<div class = "comment_title" id = "1">商品评论</div>
+
+					
+					<div class='pages'>
+						<ul>
+						</ul>
+					</div>
+					<div class = "clear"></div>
+				</div>
+					
+				<div class='submitComment'>
+					<label>发表评价</label>
+					<textarea class='comment_content'></textarea>
+					<button type='button' class='submitBtn'>提交评价</button>
+				</div>
+				
+				
+				
+				
+			</div>
+			
+		<!-------------------------main-left------------------end--------------->
+		
+		<!-------------------------main-right------------------begin--------------->
+			{include file='public/sideright.html'}
+		<!-------------------------main-right------------------end--------------->
+ 		 </div>
+  
+ {/block}
+
+{block name='js'}
+<script src="{$smarty.const.JS_URL}index.js"></script>
+{/block}
+

@@ -1,0 +1,101 @@
+/* CSS Document */
+.main-left {
+width:200px;
+}
+.main-right{
+width:800px;
+height:inherit;
+margin-left:70px;
+}
+.footer{
+margin-top:100px;
+}
+
+
+.cagorite .title{
+background-color:#4cb1ca;
+color:#FFFFFF;
+box-shadow:2px 2px 2px 2px #ccc;
+padding:10px 20px;
+}
+.cagorite .item{
+height:180px;
+border-bottom:#999999 1px solid;
+margin-top:20px;
+}
+.cagorite .item img{
+margin-right:30px;
+}
+.cagorite .item .book_name{
+color:black;
+font-size:18px;
+}
+.cagorite .item .comment{
+color:#FF3300;
+font-size:14px;
+margin-top:10px;
+}
+.cagorite .item .intro{
+color:#999999;
+font-size:14px;
+margin-top:10px;
+height:60px;
+overflow:hidden;
+}
+.cagorite .item .price{
+float:right;
+margin:20px 20px 0 0;
+color:red;
+font-weight:bold;
+}
+.cagorite .item .original_price{
+margin-left:20px;
+text-decoration:line-through;
+color:#CCCCCC;
+font-weight:lighter;
+}
+.cagorite .item .submit_buy{
+margin-left:20px;
+border:none;
+cursor:pointer;
+background-color:#4cb1ca;
+color:#FFFFFF;
+font-size:14px;
+width:70px;
+height:25px;
+border-radius:5px;
+}
+
+.page_cagorie{
+	height: 24px;
+	float: right;
+	margin-right: 50px;
+	margin-top: 20px;
+}
+.page_cagorie ul{
+	list-style: none;
+	
+}
+.page_cagorie ul li{
+	float: left;
+	border: none;
+}
+.page_cagorie ul li a{
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin-left: 8px;
+	text-align: center;
+	line-height: 24px;
+	border: 1px solid #A9A9A9;
+	border-radius: 4px;
+	color: #474747;
+	cursor: pointer;
+}
+.page_cagorie ul li a:hover{
+	color: #4cb1ca;
+	border: 1px solid #4cb1ca;
+}
+.pagenow{
+	cursor: not-allowed ! important;
+}

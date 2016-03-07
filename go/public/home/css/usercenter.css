@@ -1,0 +1,225 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#container{
+	height: 642px;
+}
+
+#tab{
+	position: relative;
+	width: 1030px;
+	height: 340px;
+	margin: 0 auto;
+}
+#tab>a{
+	display: block;
+	float: left;
+	color: #ffffff;
+	width: 130px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #4cb1ca;
+	border: 1px solid #666666;
+}
+#tab>a:hover{
+	background-color: #0082FD;
+}
+#tab>a:active{
+	background-color: #0082FD;
+}
+#tab>div{
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	background-color: #ffffff;
+	top:40px;
+	border: 1px solid #666666;
+	overflow: auto;
+}
+#pInfo{
+	z-index: 1;
+}
+#buyRecord:target,#updInfo:target,#pInfo:target{
+	z-index: 2;
+}
+.pInfo-left{
+	width: 250px;
+	height: 100%;
+	position: relative;
+}
+.pInfo-left>img{
+	width: 150px;
+	height: 130px;
+	border: 1px solid;
+	position: absolute;
+	left: 20px;
+	top:20px;
+}
+.pInfo-left>span{
+	position: absolute;
+	top: 190px;
+	left: 35px;
+	line-height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.pInfo-right{
+	position: absolute;
+	left: 250px;
+	top: 0px;
+	width: 780px;
+	height: 100%;
+}
+.infoContainer{
+	display: table;
+	width: 50%;
+	height: 70%;
+	margin-top: 5%;
+	position: relative;
+}
+.infoRow,.recordRow-th,.recordRow{
+	display: table-row;
+}
+.infoRow>div,.recordRow-th>div,.recordRow>div{
+	text-align: left;
+	line-height: 42px;
+	display: table-cell;
+	vertical-align: top;
+
+}
+.recordContainer{
+	display: table;
+	width: 90%;
+	margin: 5% auto;
+	margin-top: 20px;
+	position: relative;
+	overflow: hidden;
+}
+.recordRow-th{
+	font-weight: bold;
+	background-color: lightgray;
+}
+.recordRow{
+	border-bottom: 1px solid lightgray;
+}
+.recordRow-th>div,.recordRow>div{
+	text-align: center;
+}
+
+
+.recordRow .bookState {
+	position: relative;
+}
+/**
+ * 状态
+ */
+.recordRow .undelivery {
+	color: #CD3700;
+}
+.recordRow .delivery {
+	color: #CAFF70;
+}
+.recordRow .finish {
+	color: #008B00;
+}
+
+.recordRow .bookState a{
+	position: absolute;
+	width: 100%;
+	right: -100%;
+	top: 0;
+	background-color: #1572FC;
+	color: #fff;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.recordRow .bookState a:hover {
+	background-color: #157297;
+}
+.recordRow:nth-child(odd){
+	background-color: #4cb1ca;
+}
+.updInfo-left,.updInfo-right{
+	position: absolute;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+.updInfo-left{
+	width:49%;
+}
+.updInfo-right{
+	width: 45%;
+}
+.updInfo-right{
+	width: 49%;
+	border-left: 3px solid #4cb1ca;
+	left: 50%;
+}
+.updInfoContainer{
+	display: table;
+	width: 100%;
+	height: 70%;
+	position: relative;
+	margin-top: 50px;
+	margin-left: 10px;
+}
+.updInfoRow{
+	display: table-row;
+}
+.updInfo-Row{
+	display: table-row;
+}
+.updInfo-Row>div{
+	text-align: left;
+	display: table-cell;
+	vertical-align: top;
+	line-height: 42px;
+}
+.updInfoRow>div{
+	text-align: left;
+	display: table-cell;
+	vertical-align: top;
+}
+.updInfoInput{
+	width: 100%;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+.updBtn{
+	width: 105px;
+	height: 40px;
+	margin-left: 180px;
+	background-color: #4cb1ca;
+	cursor: pointer;
+	color: #ffffff;
+	border: 0;
+	border-radius: 4px;
+}
+.updBtn:hover{
+	background-color: #0082FD;
+}
+.updPwdContainer{
+	display: table;
+	width: 50%;
+	height: 40%;
+	position: relative;
+	margin-top: 80px;
+	margin-left: 100px;
+}
+.updPwdRow{
+	display: table-row;
+}
+.updPwdRow>div{
+	display: table-cell;
+	vertical-align: top;
+}
+.footer{
+	position: absolute;
+	bottom: 0px;
+}

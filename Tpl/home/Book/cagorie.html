@@ -1,0 +1,57 @@
+{extends file='public/layout.html'}
+{block name='style'}
+<link href = "{$smarty.const.CSS_URL}cagorite.css" rel = "stylesheet" type = "text/css">
+{/block}
+{block name='main'}
+	 <div class = "header-bottom-right">
+	    <div class = "search">
+		   <input type = "text" name="" class ="textbox" placeholder="Search">
+		   <input type = "submit" name = "" class = "submit" value ="">
+		</div>
+		<div class = "icon"><img src="{$smarty.const.IMG_URL}cart.png"></div>
+	    <div class = "cart buy-cart"><a href = "##">购物车(<span class='buy-cart-count'>0</span>)</a></div>
+		<div class = "icon"><img src="{$smarty.const.IMG_URL}tag.png"></div>
+		<div class = "cart buy-user"><a href = "##">我的账户</a></div>
+	 </div>
+	 <div class = "clear"></div>
+  </div>
+  </div>
+  
+  
+  <div class = "main">
+  	<div class = "main-left">
+  		{include file='public/sideleft.html'}
+	</div>
+	<div class = "main-right">
+		<div class = "cagorite">
+			<div class = "title">{$btype}&nbsp;>&nbsp;{$btype_s}</div>
+			{foreach $bookTypesInfo as $k => $v}
+			<div class = "item">
+				<img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a class = "book_name" href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<div class = "comment">有{$v.commentNum}条评论</div>
+				<div class = "intro">{$v.bcontent}</div>
+				<div class = "price">&yen;{$v.bnowprice} <span class = "original_price">&yen;{$v.bprice} </span>
+					<input class = "submit_buy" type="button" author='{$v.bauthor}' bcount='{$v.bcount}' bid='{$v.bid}' price='{$v.bnowprice}' value="购买">
+				</div>
+			</div>
+			{/foreach}
+			
+		</div>
+		<div class = "page_cagorie">
+			<ul>{if $pagenum!=''}
+				<li><a href='{$smarty.const.__ACTION__}/btype/{$btype}/s/{$btype_s}/pn/1'><<</a></li>
+				<li><a href='{$smarty.const.__ACTION__}/btype/{$btype}/s/{$btype_s}/pn/{if $pagenow>2}{$pagenow-1}{else}1{/if}'><</a></li>
+				{section name=loop loop=$pagenum}
+				<li><a  {if {$smarty.section.loop.index+1}=={$pagenow}} class='pagenow' disabled='disabled'{else}href='{$smarty.const.__ACTION__}/btype/{$btype}/s/{$btype_s}/pn/{$smarty.section.loop.index+1}' {/if}>{$smarty.section.loop.index+1}</a></li>
+				{/section} 
+				<li><a href='{$smarty.const.__ACTION__}/btype/{$btype}/s/{$btype_s}/pn/{if $pagenum-$pagenow>1}{$pagenow+1}{else}{$pagenum}{/if}'>></a></li>
+				<li><a href='{$smarty.const.__ACTION__}/btype/{$btype}/s/{$btype_s}/pn/{$pagenum}'>>></a></li>
+				{/if}
+			</ul>
+		</div>
+	</div>
+{/block}
+{block name='js'}
+<script src="{$smarty.const.JS_URL}index.js"></script>
+{/block}

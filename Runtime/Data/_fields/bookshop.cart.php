@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'cartid', 1 => 'uid', 2 => 'bid', 3 => 'count', 4 => 'price', 5 => 'time', '_autoinc' => true, '_pk' => 'cartid', '_type' => array ( 'cartid' => 'int(11)', 'uid' => 'int(11)', 'bid' => 'int(11)', 'count' => 'int(11)', 'price' => 'float', 'time' => 'date', ), );?>

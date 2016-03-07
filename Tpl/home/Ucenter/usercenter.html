@@ -1,0 +1,168 @@
+{extends file='public/layout.html'}
+{block name='style'}
+<link href = "{$smarty.const.CSS_URL}usercenter.css" rel = "stylesheet" type = "text/css">
+{/block}
+{block name='main'}
+  			</div>
+ 		 </div>
+
+		 <hr/>
+		 <div id='tab'>
+		 	<a href="#pInfo" class='pInfo'>个人信息</a>
+		 	<a href="#buyRecord" class='buyRecord'>我的订单</a>
+		 	<a href="#updInfo" class='updInfo'>修改信息</a>
+		 	<div id='pInfo'>
+		 		<div class='pInfo-left'>
+		 			<img src="{$smarty.const.IMG_URL}heads/zhengyi.gif">
+		 			<span class='username'></span>
+		 		</div>
+		 		<div class='pInfo-right'>
+		 			<div class='infoContainer'>
+		 				<div class='infoRow'>
+		 					<div class='infoMail'>邮箱：</div>
+		 					<div class='infoMail'></div>
+		 				</div>
+		 				<div class='infoRow'>
+		 					<div class='infoName'>收货人：</div>
+		 					<div class='infoName'></div>
+		 				</div>
+		 				<div class='infoRow'>
+		 					<div class='infoPhone'>电话：</div>
+		 					<div class='infoPhone'></div>
+		 				</div>
+		 				<div class='infoRow'>
+		 					<div class='infoAddress'>地址：</div>
+		 					<div class='infoAddress'></div>
+		 				</div>
+		 				<div class='infoRow'>
+		 					<div class='infoZipcode'>邮编：</div>
+		 					<div class='infoZipcode'></div>
+		 				</div>
+		 			</div>
+		 		</div>
+		 	</div>
+		 	<div id='buyRecord'>
+		 		<div class='recordContainer'>
+		 			<!-- <div class='recordRow-th'>
+		 				<div class='bookName'>书名</div>
+		 				<div class='bookCount'>数量</div>
+		 				<div class='bookPrice'>单价</div>
+		 				<div class='bookTotalPrice'>总金额</div>
+		 				<div class='bookBuyTime'>购买时间</div>
+		 			</div> -->
+		 			<!-- <div class='recordRow'>
+		 				<div class='bookName'>编译原理</div>
+		 				<div class='bookCount'>2</div>
+		 				<div class='bookPrice'>10.00</div>
+		 				<div class='bookTotalPrice'>20.00</div>
+		 				<div class='bookBuyTime'>2015-7-24</div>
+		 			</div>
+		 			<div class='recordRow'>
+		 				<div class='bookName'>编译原理</div>
+		 				<div class='bookCount'>2</div>
+		 				<div class='bookPrice'>10.00</div>
+		 				<div class='bookTotalPrice'>20.00</div>
+		 				<div class='bookBuyTime'>2015-7-24</div>
+		 			</div>
+		 			<div class='recordRow'>
+		 				<div class='bookName'>编译原理</div>
+		 				<div class='bookCount'>2</div>
+		 				<div class='bookPrice'>10.00</div>
+		 				<div class='bookTotalPrice'>20.00</div>
+		 				<div class='bookBuyTime'>2015-7-24</div>
+		 			</div>
+		 			<div class='recordRow'>
+		 				<div class='bookName'>编译原理</div>
+		 				<div class='bookCount'>2</div>
+		 				<div class='bookPrice'>10.00</div>
+		 				<div class='bookTotalPrice'>20.00</div>
+		 				<div class='bookBuyTime'>2015-7-24</div>
+		 			</div>
+		 			<div class='recordRow'>
+		 				<div class='bookName'>编译原理</div>
+		 				<div class='bookCount'>2</div>
+		 				<div class='bookPrice'>10.00</div>
+		 				<div class='bookTotalPrice'>20.00</div>
+		 				<div class='bookBuyTime'>2015-7-24</div>
+		 			</div>
+		 			<div class='recordRow'>
+		 				<div class='bookName'>编译原理</div>
+		 				<div class='bookCount'>2</div>
+		 				<div class='bookPrice'>10.00</div>
+		 				<div class='bookTotalPrice'>20.00</div>
+		 				<div class='bookBuyTime'>2015-7-24</div>
+		 			</div>
+		 			<div class='recordRow'>
+		 				<div class='bookName'>编译原理</div>
+		 				<div class='bookCount'>2</div>
+		 				<div class='bookPrice'>10.00</div>
+		 				<div class='bookTotalPrice'>20.00</div>
+		 				<div class='bookBuyTime'>2015-7-24</div>
+		 			</div>
+		 			<div class='recordRow'>
+		 				<div class='bookName'>编译原理</div>
+		 				<div class='bookCount'>2</div>
+		 				<div class='bookPrice'>10.00</div>
+		 				<div class='bookTotalPrice'>20.00</div>
+		 				<div class='bookBuyTime'>2015-7-24</div>
+		 			</div> -->
+		 		</div>
+		 	</div>
+		 	<div id='updInfo'>
+		 		<div class='updInfo-left'>
+		 			<div class='updInfoContainer'>
+		 				<div class='updInfoRow'>
+		 					<div class='updInfo-Row'>
+		 						<div class='updInfoNick'>账号：</div>
+		 						<div><input type='text' placeholder='账号' class='updInfoInput' value=''></div>
+		 					</div>
+		 					<div class='updInfo-Row'>
+		 						<div class='updInfoName'>姓名：</div>
+		 						<div><input type='text' placeholder='收货人' class='updInfoInput' value=''></div>
+		 					</div>
+		 				</div>
+		 				<div class='updInfoRow'>
+		 					<div class='updInfo-Row'>
+								<div class='updInfoMail'>邮箱：</div>
+		 						<div><input type='text' placeholder='邮箱' class='updInfoInput' value=''></div>
+		 					</div>
+		 					<div class='updInfo-Row'>
+		 						<div class='updInfoPhone'>手机：</div>
+		 						<div><input type='text' placeholder='联系方式' class='updInfoInput' value=''></div>
+		 					</div>
+		 				</div>
+		 				<div class='updInfoRow'>
+		 					<div class='updInfo-Row'>
+		 						<div class='updInfoZipcode'>邮编：</div>
+		 						<div><input type='text' placeholder='邮编' class='updInfoInput' value=''></div>
+		 					</div>
+		 					<div class='updInfo-Row'>
+		 						<div class='updInfoAddress'>地址：</div>
+		 						<div><input type='text' placeholder='地址' class='updInfoInput' value=''></div>
+		 					</div>
+		 				</div>
+		 				<div class='updInfoRow'>
+		 					<button class='updBtn updPersonalInfo'>修改</button>
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<div class='updInfo-right'>
+		 			<div class='updPwdContainer'>
+		 				<div class='updPwdRow'>
+		 					<div>新密码：</div>
+		 					<div><input type='password' class='updInfoInput'></div>
+		 				</div>
+		 				<div class='updPwdRow'>
+		 					<div>重复密码：</div>
+		 					<div><input type='password' class='updInfoInput'></div>
+		 				</div>
+		 				
+		 			</div>
+		 			<button class='updBtn updPassword'>修改</button>
+		 		</div>
+		 	</div>
+		 </div>
+{/block}
+{block name='js'}
+	<script src="{$smarty.const.JS_URL}userCenter.js"></script>
+{/block}

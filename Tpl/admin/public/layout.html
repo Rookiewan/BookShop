@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' >
+<link href = "{$smarty.const.ADMIN_CSS_URL}styles.css" rel = "stylesheet" type = "text/css">
+
+{block name='style'}
+{/block}
+
+<title>智慧百屋后台管理</title>
+</head>
+
+<body>
+<div id='container'>
+  <div class = "header">
+  <div class = "header-top">
+  	<span>前端：王静雯、后台：陈万芳、文档：林晨光</span>
+     <div class = "header-top-right">
+	   <ul>
+	     <li class = "admin_login"><a href = "{$smarty.const.__GROUP__}/Admin/login">登录</a></li>
+		 <li class = "admin_quit"><a href = "##">退出</a></li>
+	   </ul>
+	 </div>
+	 <div class = "clear"></div>
+  </div>
+  <div class = "header-bottom">
+     <div class = "header-bottom-left">
+	    <div class = "logo">
+		  <a href = "{$smarty.const.__GROUP__}/Admin/index">智慧百屋后台管理</a>
+		</div>
+	 </div>
+	 {block name='main'}
+
+	 {/block}
+
+
+  <div class = "footer">
+  	<hr>
+	<div class = "footer_pic">
+		<img src="{$smarty.const.ADMIN_IMG_URL}footer1.png"><img src="{$smarty.const.ADMIN_IMG_URL}footer2.png"><img src="{$smarty.const.ADMIN_IMG_URL}footer3.png"><img src="{$smarty.const.ADMIN_IMG_URL}footer4.png">
+	</div>
+	<div class = "footer_bottom"><a href="http://www.miitbeian.gov.cn" target='blank'>闽ICP备15014635号</a> Copyright &copy;智慧百屋</div>
+  </div>
+
+  <!--alert-->
+		<div id='alertTips' onselectstart='return false'>
+			<div class='alertMain'>
+				<div class='hostName' id='alertTitle' onselectstart='return false'>BookShop:
+					<i class='closeAlert'>Close</i>
+				</div>
+				<div class='alertContent'></div>
+			</div>
+		</div>
+	  
+  </div>
+  <div id='mask' class='mask'></div>
+  <script src="{$smarty.const.ADMIN_JS_URL}jquery-1.9.1.min.js"></script>
+  <script src='{$smarty.const.ADMIN_JS_URL}ajaxRookie_wan.js'></script>
+  {block name='js'}
+{/block}
+</body>
+</html>

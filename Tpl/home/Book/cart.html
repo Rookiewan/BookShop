@@ -1,0 +1,49 @@
+{extends file='public/layout.html'}
+{block name='style'}
+<link href = "{$smarty.const.CSS_URL}cart.css" rel = "stylesheet" type = "text/css">
+{/block}
+{block name='main'}
+  </div>
+  </div>
+  
+		 <div class = "cart">
+		 	<div class = "title">
+				<ul>
+					<li class = "id">编号</li>
+					<li class = "name">商品名称</li>
+					<li class = "price">单价</li>
+					<li class = "count">数量</li>
+					<li class = "action">操作</li>
+				</ul>
+			</div>
+			<!-- <div class="clear"></div>
+		 	<div class = "item">
+				<div class = "number">1</div>
+				<img src="{$smarty.const.IMG_URL}r1.jpg"/>
+				<div class = "book_name">我坚信<br /><div class = "author">作者：</div></div>
+				<div class = "price price__">&yen;19.90</div>
+				<div class = "countItem"></div>
+				<div class = "action">删除</div>
+				<input type='hidden' value='bid'>
+			</div>
+			<div class = "clear"></div>
+			
+			<div class = "item">
+				<div class = "number">2</div>
+				<img src="{$smarty.const.IMG_URL}r1.jpg"/>
+				<div class = "book_name">我坚信<br /><div class = "author">作者：</div></div>
+				<div class = "price price__">&yen;19.90</div>
+				<div class = "countItem"></div>
+				<div class = "action">删除</div>
+			</div> -->
+		 	
+			
+			<div class = "total_price">商品金额总计：<span class = "total">&yen;39.80</span><br /><input class = "pay" type = "button" value="结算"></div>
+		 </div>
+		 
+		
+		 
+{/block}
+{block name='js'}
+<script src='{$smarty.const.JS_URL}cart.js'></script>
+{/block}

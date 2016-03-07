@@ -1,0 +1,109 @@
+{extends file='public/layout.html'}
+{block name='style'}
+{/block}
+{block name='main'}
+  </div>
+</div>
+	<div class='main'>
+		<div class='mainLeft'>
+			<ul>
+				<li class='tabSeleted'><a href='##'>首页</a></li>
+				<li><a href='##'>用户管理</a></li>
+				<li><a href='##'>图书管理</a></li>
+				<li><a href='##'>订单管理</a></li>
+				<li><a href='##'>评价管理</a></li>
+			</ul>
+
+		</div>
+		<div class='mainRight'>
+			<div class='mainIndex'>
+				<img src='{$smarty.const.ADMIN_IMG_URL}head.gif'>
+				<div class='welcome'>欢迎您！</div>
+				<div class='admin'></div>
+			</div>
+			<div class='mainUser'>
+				
+				
+			</div>
+			<div class='mainBook'>
+				
+			</div>
+			<div class='mainOrder'>
+				
+			</div>
+			<div class='mainComment'>
+				
+			</div>
+			
+		</div>
+		<div class='optionBookInfo'>
+			<div class='optionTableOuter'>
+				<div class='optionCaption'></div>
+				<!-- <div class='optionTitle'>
+					<div></div>
+				</div> -->
+				<div class='optionRow'>
+					<div>书名</div>
+					<div><input type='text' name='bname' placeholder='书名' required='required'></div>
+				</div>
+				<div class='optionRow'>
+					<div>作者</div>
+					<div><input type='text' name='bauthor' placeholder='作者' required='required'></div>
+				</div>
+				<div class='optionRow'>
+					<div>类型</div>
+					<div>
+						<select>
+							<option>青春校园</option>
+							<option>成功励志</option>
+							<option>世界名著</option>
+							<option>人文社科</option>
+							<option>科学技术</option>
+							<option>经济管理</option>
+							<option>教材辅导</option>
+							<option>文学艺术</option>
+							<option>少儿读物</option>
+							<option>生活百科</option>
+						</select>
+					</div>
+				</div>
+				<div class='optionRow'>
+					<div>原价</div>
+					<div><input type='number' name='bprice' placeholder='原价'></div>
+				</div>
+				<div class='optionRow'>
+					<div>现价</div>
+					<div><input type='number' name='bnowprice' placeholder='现价'></div>
+				</div>
+				<div class='optionRow'>
+					<div>出版社</div>
+					<div><input type='text' name='bpublic' placeholder='出版社'></div>
+				</div>
+				<div class='optionRow'>
+					<div>出版时间</div>
+					<div><input type='date' name='bpublictime' placeholder='出版时间'></div>
+				</div>
+				<div class='optionRow'>
+					<div>库存</div>
+					<div><input type='number' name='bcount' placeholder='库存' required='required'></div>
+				</div>
+				<div class='optionRow'>
+					<div>作者简介</div>
+					<div><textarea class='bauthorI'></textarea></div>
+				</div>
+				<div class='optionRow'>
+					<div>内容简介</div>
+					<div><textarea class='bcontent'></textarea></div>
+				</div>
+				<div class='optionRow'>
+					<div><input type='submit' class='ok' value='确定'></div>
+					<div><input type='submit' class='cancel' value='取消'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+  {/block}
+{block name='js'}
+<script src='{$smarty.const.ADMIN_JS_URL}index.js'></script>
+{/block}

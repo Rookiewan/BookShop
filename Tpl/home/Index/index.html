@@ -1,0 +1,267 @@
+{extends file='public/layout.html'}
+{block name='style'}
+<link href = "{$smarty.const.CSS_URL}slider.css" rel = "stylesheet" type = "text/css">
+{/block}
+{block name='main'}
+  
+  <div class = "header-bottom-right">
+	    <div class = "search">
+		   <input type = "text" name="" class ="textbox" placeholder="Search">
+		   <input type = "submit" name = "" class = "submit" value ="">
+		</div>
+		<div class = "icon"><img src="{$smarty.const.IMG_URL}cart.png"></div>
+	    <div class = "cart buy-cart"><a href = "##">购物车(<span class='buy-cart-count'>0</span>)</a></div>
+		<div class = "icon"><img src="{$smarty.const.IMG_URL}tag.png"></div>
+		<div class = "cart buy-user"><a href = "##">我的账户</a></div>
+	 </div>
+	 <div class = "clear"></div>
+  </div>
+  </div>
+  <div class = "main">
+    <div class = "main-left">
+	   <div class = "main-left-top">
+
+	     {include file='public/sideleft.html'}
+		 <div class="slider">
+		   <div class="slider-container">
+              <div class="slider-wrapper">
+                 <div class="slide"> <img src="{$smarty.const.IMG_URL}img1.jpg" alt="jQuery Slider with CSS Transitions"> </div>
+                 <div class="slide"> <img src="{$smarty.const.IMG_URL}img2.jpg" alt="jQuery Slider with CSS Transitions"> </div>
+                 <div class="slide"> <img src="{$smarty.const.IMG_URL}img3.jpg" alt="jQuery Slider with CSS Transitions"> </div>
+              </div>
+           </div>
+        </div>
+		
+	    <div class = "new-book">
+		  <h3>新书上架</h3>
+		  <div>
+		  	{foreach $newBooks as $k=>$v}
+		     <div class = "book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg" title='{$v.bname}'>
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" title='{$v.bname}'>{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			 
+		  </div>
+	    </div>
+	  </div>
+	  
+	  <div class = "main-left-bottom">
+	  <div class = "recommend">
+	  	<h3 class = "recommend-title">为你推荐</h3>
+		<ul class = "recommend-header">
+			<li id = "s1" onmouseover="showrecommend(1)" >文艺</li>
+			<li id = "s2" onmouseover="showrecommend(2)" >小说</li>
+			<li id = "s3" onmouseover="showrecommend(3)">励志</li>
+			<li id = "s4" onmouseover="showrecommend(4)">社科</li>
+			<li id = "s5" onmouseover="showrecommend(5)">经管</li>
+		</ul>
+		<hr/>
+	  <div id = "recommend1">
+	  	<div class = "layer">
+	  		{foreach $assortBook1 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			 
+		</div>
+		<div class = "layer">
+			{foreach $assortBook2 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			
+		</div>
+	  </div>
+	  <div id = "recommend2">
+	  	<div class = "layer">
+	  		{foreach $assortBook3 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			
+		</div>
+		<div class = "layer">
+			{foreach $assortBook4 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			
+		</div>
+	  </div>
+	  <div id = "recommend3">
+	  	<div class = "layer">
+	  		{foreach $assortBook1 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			
+		</div>
+		<div class = "layer">
+			{foreach $assortBook2 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			
+		</div>
+	  </div>
+	  <div id = "recommend4">
+	  	<div class = "layer">
+	  		{foreach $assortBook3 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			
+		</div>
+	    <div class = "layer">
+	    	{foreach $assortBook4 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			
+		</div>
+	  </div>
+	  <div id = "recommend5">
+	  	<div class = "layer">
+	  		{foreach $assortBook2 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			
+		</div>
+		<div class = "layer">
+			{foreach $assortBook3 as $k=>$v}
+			 <div class="book recommend_book">
+			    <img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+				<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+				<a class = "new_price">&yen;{$v.bnowprice}</a>
+				<a class = "original_price">&yen;{$v.bprice}</a>
+			 </div>
+			{/foreach}
+			
+		</div>
+	  </div>	
+	  </div>
+	  
+	  
+	  <div class = "favorite">
+	  	<h3 class = "recommend-title">读者推荐</h3>
+		<ul class = "favorite-header">
+			<li id = "s6" onmouseover="showfavorite(1)">好评最多</li>
+			<li id = "s7" onmouseover="showfavorite(2)">最受关注</li>
+			<li id = "s8" onmouseover="showfavorite(3)">人气收藏</li>
+		</ul>
+		<hr/>
+		<div id = "favorite1">
+			{foreach $goodCommentBook as $k=>$v}
+		 	<div class = "favorite-book">
+				<img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<div class = "book describe">
+					<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+					<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+					<a class = "new_price">&yen;{$v.bprice}</a>
+					<a class = "original_price">&yen;{$v.bnowprice}</a>
+					<br/>
+					<p>{$v.bcontent}</p>
+				</div>
+			</div>
+			{/foreach}
+			
+		</div>
+		<div id = "favorite2">
+			{foreach $popBook as $k=>$v}
+		 	<div class = "favorite-book">
+				<img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<div class = "book describe">
+					<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+					<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+					<a class = "new_price">&yen;{$v.bprice}</a>
+					<a class = "original_price">&yen;{$v.bnowprice}</a>
+					<br/>
+					<p>{$v.bcontent}</p>
+				</div>
+			</div>
+			{/foreach}
+		 	
+		</div>
+		<div id = "favorite3">
+			{foreach $collectionBook as $k=>$v}
+		 	<div class = "favorite-book">
+				<img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg">
+				<div class = "book describe">
+					<a href = "{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a>
+					<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+					<a class = "new_price">&yen;{$v.bnowprice}</a>
+					<a class = "original_price">&yen;{$v.bprice}</a>
+					<br/>
+					<p>{$v.bcontent}</p>
+				</div>
+			</div>
+			{/foreach}
+		 	
+		</div>
+	  </div>  
+	  
+	  
+	</div>
+	</div>
+	<!---------main-left----------end----------->
+	
+	{include file='public/sideright.html'}
+	<!--------main-right--------end-------------->
+  </div>
+  <!-------mian-----------end--------------->
+  
+  {/block}
+{block name='js'}
+<script src="{$smarty.const.JS_URL}index.js"></script>
+{/block}

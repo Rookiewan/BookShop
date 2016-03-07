@@ -1,0 +1,137 @@
+/* -----------cart1的CSS-------------- */
+.main{
+border:#ccc solid 4px;
+margin:0px 100px 0 100px;
+height:200px;
+}
+.main img{
+display:block;
+float:left;
+margin:50px 0 25px 200px;
+}
+.Content {
+float:left;
+margin:90px 50px;
+font-size:20px;
+}
+.footer{
+margin-top:150px;}
+
+
+/* -----------cart2的CSS-------------- */
+.cart{
+border:#ccc solid 4px;
+margin:0px 100px 0 100px;
+}
+/*---------------购物车标题栏------start---------------*/
+.cart .title{
+background-color:#999999;
+color:#FFFFFF;
+height:40px;
+}
+.cart li{
+float:left;
+}
+.cart .title .id{
+margin:10px;
+}
+.cart .title .name,.count ,.countItem,.action{
+margin:10px 0px 10px 100px;
+}
+.cart .title .price{
+margin:10px 0 10px 470px;
+}
+/*---------------购物车标题栏--------end-------------*/
+
+/*---------------购物车商品栏------start---------------*/
+.cart .item{
+height:120px;
+border-bottom:2px #ccc solid;
+position: relative;
+}
+.cart img{
+width:90px;
+height:100px;
+float:left;
+margin:15px;
+}
+.cart .item .number{
+float:left;
+margin:50px 20px;
+font-size:20px;
+}
+.cart .item .book_name{
+float:left;
+margin:40px 20px;
+font-size:20px;
+}
+.book_name{
+	width: 200px
+}
+.cart .item .book_name > a {
+    color: #4cb1ca;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.cart .item .book_name > a:hover {
+    color: #157297;
+}
+.cart .item .author{
+font-size:16px;
+}
+.cart .item .price{
+float:left;
+margin:40px 0 40px 270px;
+}
+.cart .item .count {
+float:left;
+}
+.countItem{
+	width: 50px;
+	height: 24px;
+	position: absolute;
+	left: 730px;
+	top: 31px;
+}
+.cart .item .action{
+float:right;
+cursor:pointer;
+margin:40px 150px 40px 0px;
+color:#4cb1ca;
+}
+.cart .item .action:hover {
+    text-decoration: underline;
+}
+.toIndex {
+    font-weight: 700;
+    color: #4cb1ca;
+}
+.toIndex:hover {
+    text-decoration: underline;
+}
+/*---------------购物车商品栏------end---------------*/
+
+/*---------------购物车结算栏------start---------------*/
+.total_price{
+float:right;
+margin:30px;
+font-size:18px;
+}
+.total_price .total{
+color:#FF0000;
+font-weight:bold;
+}
+.pay{
+float:right;
+border:none;
+cursor:pointer;
+background-color:#4cb1ca;
+color:#FFFFFF;
+font-size:20px;
+width:100px;
+height:30px;
+margin:20px 0;
+}
+/*---------------购物车结算栏------end---------------*/
+

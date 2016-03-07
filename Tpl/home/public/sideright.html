@@ -1,0 +1,330 @@
+<div class = "main-right">
+		<div class = "onsale">
+			<img src="{$smarty.const.IMG_URL}sprite2.png">
+			<div class = "onsale-title">新书热卖榜</div>
+			<div class = "clear"></div>
+			<ul class = "onsale-header">
+				<li class = "salestyle2" onmouseover="showOnsale1(1)" >总榜</li>
+				<li class = "salestyle1" onmouseover="showOnsale1(2)" >青春</li>
+				<li class = "salestyle1" onmouseover="showOnsale1(3)" >经济</li>
+				<li class = "salestyle1" onmouseover="showOnsale1(4)" >社科</li>
+				<li class = "salestyle1" onmouseover="showOnsale1(5)" >小说</li>
+			</ul>
+			<div class = "clear"></div>
+			<div id = "onsale1">
+				{foreach $assortBook1 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook2 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+			<div id = "onsale2">
+				{foreach $assortBook2 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook3 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+			<div id = "onsale3">
+				{foreach $assortBook3 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook4 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+			</div>
+			<div id = "onsale4">
+				{foreach $assortBook4 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook1 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+			<div id = "onsale5">
+				{foreach $assortBook1 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook2 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+		</div>
+		<div class = "onsale book-onsale">
+			<img src="{$smarty.const.IMG_URL}sprite2.png">
+			<div class = "onsale-title">图书畅销榜</div>
+			<div class = "clear"></div>
+			<ul class = "onsale-header">
+				<li class = "salestyle2" onmouseover="showOnsale2(6)" >总榜</li>
+				<li class = "salestyle1" onmouseover="showOnsale2(7)" >青春</li>
+				<li class = "salestyle1" onmouseover="showOnsale2(8)" >经济</li>
+				<li class = "salestyle1" onmouseover="showOnsale2(9)" >社科</li>
+				<li class = "salestyle1" onmouseover="showOnsale2(10)" >小说</li>
+			</ul>
+			<div class = "clear"></div>
+			<div id = "onsale6">
+				{foreach $assortBook3 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook1 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+			<div id = "onsale7">
+				{foreach $assortBook2 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook3 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+			<div id = "onsale8">
+				{foreach $assortBook3 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook4 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+			<div id = "onsale9">
+				{foreach $assortBook4 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook1 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+			<div id = "onsale10">
+				{foreach $assortBook1 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook2 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank"></div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+		</div>
+		<div class = "onsale e-book">
+			<img src="{$smarty.const.IMG_URL}sprite2.png">
+			<div class = "onsale-title">电子书榜</div>
+			<div class = "clear"></div>
+			<div id = "onsale1">
+				{foreach $assortBook1 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank">{$v.bid}</div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				{foreach $assortBook2 as $k=>$v}
+					<div class = "onsalebook-style1" onmouseover="this.className = 'onsalebook-style2'" onmouseout="this.className = 'onsalebook-style1'">
+						<div class="rank">{$v.bid}</div><div class = "onsalebook-title"><a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}">{$v.bname}</a></div>
+						<div class="pic"><img src="{$smarty.const.IMG_URL}details/{$v.bimage}/{$v.bimage}_index.jpg"></div>
+						<div class = "detail">
+							<a href="{$smarty.const.__GROUP__}/Book/bookDetail/bid/{$v.bid}" class = "author">{$v.bauthor}</a>
+							<a class = "new_price">&yen;{$v.bnowprice}</a>
+							<a class = "original_price">&yen;{$v.bprice}</a>
+						</div>
+					</div>
+					<div class = "clear"></div>
+				{/foreach}
+				
+			</div>
+		</div>
+	
+    </div>

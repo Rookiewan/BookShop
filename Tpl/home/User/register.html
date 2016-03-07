@@ -1,0 +1,25 @@
+{extends file='public/layout.html'}
+{block name='style'}
+<link href = "{$smarty.const.CSS_URL}register.css" rel = "stylesheet" type = "text/css">
+{/block}
+{block name='main'}
+  			</div>
+ 		 </div>
+		 <hr/>
+		 <div class = "main">
+		 	<div class = "title">注册新用户</div>
+			<input class = "inf1" type = "text"  placeholder = "账号" >
+			<input class = "inf2" type = "text"  placeholder = "收货人" >
+			<input class = "inf1" type = "text"  placeholder = "邮编" >
+			<input class = "inf2" type = "text"  placeholder = "地址" >
+			<input class = "inf1" type = "password"  placeholder = "密码" >
+			<input class = "inf2" type = "text"  placeholder = "邮箱" >
+			<input class = "inf1" type = "password"  placeholder = "确认密码" >
+			<input class = "inf2" type = "text"  placeholder = "联系方式" >
+			<input class = "submit" type = "button" value="立即注册">
+		 </div>
+
+{/block}
+{block name='js'}
+		<script src='{$smarty.const.JS_URL}register.js'></script>
+{/block}

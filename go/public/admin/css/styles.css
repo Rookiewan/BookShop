@@ -1,0 +1,484 @@
+/* CSS Document */
+ol,ul{
+list-style:none;
+margin:0px;
+padding:0px;
+}
+ul{
+display:block;
+}
+a{
+text-decoration:none;
+}
+body{
+font-family:"微软雅黑";
+margin:0 auto;
+padding:0;
+width:1340px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-khtml-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+#container{
+	width:100%;
+	position: relative;
+	margin:0 auto;
+}
+.clear{
+clear:both;
+}
+
+/*--------------header-top-------start---------------*/
+.header-top{
+background-color:#4cb1ca;
+height:40px;
+font-size:14px;
+}
+.header-top>span{
+	color: #FFFFFF;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.header-top-right{
+display:block;
+float:right;
+padding-right:20px;
+color:#96e8fc;
+}
+.header-top-right ul li{
+display:inline-block;
+}
+.header-top-right a{
+display:block;
+color:#FFFFFF;
+margin:15px;
+margin-top:10px;
+}
+/*--------------header-top--------end---------------*/
+.header-bottom{
+display:block;
+height:100px;
+margin:20px 100px 0 100px;
+width:1149px;
+}
+.logo{
+display:block;
+float:left;
+font-size:40px;
+font-weight:bolder;
+margin-left:20px;
+margin-top:10px;
+text-shadow: 5px 5px 10px #666666;
+}
+.logo a{
+color:#666666;
+
+}
+/*--------------main------start------------*/
+
+.main{
+	margin: 0 auto;
+	padding: 20px;
+	width: 1150px;
+	height: 800px;
+}
+/*--------------main-left-----start------------*/
+.mainLeft{
+	width: 200px;
+	height: 500px;
+	position: relative;
+	margin-left: 30px;
+	padding-top: 20px;
+	float: left;
+	border:1px solid #4CB1CA;
+	border-radius: 10px;
+	box-shadow:  5px 5px 10px 5px #4CB1CA;
+	
+}
+.mainLeft ul li {
+	text-align: center;
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	
+}
+.mainLeft ul li a{
+	color: #666666;
+	font-size: 24px;
+
+}
+.tabSeleted{
+	background-color: #4CB1CA;
+	color: #FFFFFF;
+	text-shadow: 2px 2px 3px #FFFFFF;
+}
+/*--------------main-left-----end------------*/
+
+/*--------------main-right-----start------------*/
+.mainRight{
+	width: 880px;
+	height: 700px;
+	position: relative;
+	border-radius: 10px;
+	border:1px dashed #4CB1CA;
+	float: right;
+	overflow-y: scroll;
+    overflow-x: hidden;
+}
+.mainIndex{
+	position: relative;
+	margin-top: 120px;
+	margin-left: 150px;
+	width: 400px;
+	height: 250px;
+	border: 1px solid #666666;
+	border-radius: 10px;
+	box-shadow:  5px 5px 10px 5px #666666;
+
+}
+.mainIndex img{
+	width: 136px;
+	position: absolute;
+	left: 30px;
+	top: 50px;
+	border-radius: 4px;
+}
+.mainIndex .welcome{
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	font-size: 30px;
+	font-weight: bold;
+	position: absolute;
+	left: 180px;
+	top: 50px;
+}
+.mainIndex .admin{
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	left: 220px;
+	top: 110px;
+}
+.mainUser,.mainBook,.mainComment, .mainOrder{
+	border: 1px solid #666666;
+	border-radius: 10px;
+	box-shadow:  5px 5px 10px 5px #666666;
+	padding: 10px;
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: none;
+}
+.mainUser{
+	//display: table;
+}
+.mainBook{
+	//display: table;
+}
+.mainComment{
+	//display: table;
+}
+.tableCaption{
+	display: table-caption;
+	font-size: 22px;
+	font-weight: bold;
+	color: #666666;
+	text-align: center;
+}
+.tableTitle,.tableRow{
+	display: table-row;
+	width: 95%;
+	height: 25px;
+}
+.tableTitle{
+	height: 30px;
+	font-size: 22px;
+	font-weight: bold;
+	background-color: #666666;
+}
+.tableRow:nth-child(odd){
+	background-color: #4CB1CA;
+}
+.tableTitle div,.tableRow div{
+	display: table-cell;
+	vertical-align: middle;
+	border-left: 1px solid #000000;
+	text-align: center;
+}
+.tableRow div:nth-child(3){
+	max-width: 150px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.tableRow [class*='option'] a,.addBook{
+	width: 50px;
+	height: 20px;
+	line-height: 20px;
+	background-color: #4CB1CA;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: 1px solid #666666;
+	box-shadow: 3px 3px 3px 3px #666666;
+	margin-left: 10px;
+	text-shadow: 2px 2px 3px;
+	display: inline-block;
+	text-align: center;
+}
+
+.tableRow .state {
+	position: relative;
+}
+.tableRow .state .rowOpt {
+	position: absolute;
+	width: 200%;
+	right: -250%;
+	top: 0;
+	height: 100%;
+	background-color: #1572FC;
+	border-left: 0;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.tableRow .state .rowOpt .states {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	display: none;
+}
+.tableRow .state .rowOpt .states li {
+	background-color: #1572FC;
+	cursor: pointer;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.tableRow .state .rowOpt .states li:hover {
+	background-color: #157297;
+}
+.tableRow .state .rowOpt .states .curr {
+	background-color: #157297;
+}
+.tableRow .state .rowOpt>a {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	color: #fff;
+	font-size: 14px;
+	vertical-align: middle;
+	line-height: 1.5;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.tableRow .state .rowOpt>a:hover {
+	background-color: #157297;
+}
+
+.addBook{
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.optionBookInfo{
+	width: 50%;
+	height: auto;
+	border: 1px solid #666666;
+	border-radius: 10px;
+	box-shadow:  5px 5px 10px 5px #666666;
+	background-color: #FFFFFF;
+	position: absolute;
+	left: 30%;
+	top: 100px;
+	z-index: 999;
+	display: none;
+
+}
+.optionTableOuter{
+	display: table;
+	width: 100%;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+}
+.optionCaption{
+	display: table-caption;
+	font-size: 22px;
+	font-weight: bold;
+	color: #666666;
+	text-align: center;
+}
+.optionRow{
+	display: table-row;
+}
+.optionRow div{
+	display: table-cell;
+	width: 50%;
+	padding: 10px;
+	vertical-align: middle;
+}
+.optionRow div input{
+	width: 80%;
+	height: 25px;
+	padding: 4px;
+}
+.optionRow div:nth-child(1){
+	width: 40%;
+	text-align: right;
+}
+.optionRow div select{
+	width: 80%;
+	padding: 4px;
+	text-align: center;
+	height: 25px;
+}
+.optionRow div select option{
+
+}
+.optionRow div textarea{
+	width: 80%;
+	height: 100px;
+	max-width: 80%;
+	max-height: 100px;
+	padding: 4px;
+}
+.optionRow div input[type='submit']{
+	width: 90px;
+	height: 40px;
+	background-color: #4CB1CA;
+	color: #FFFFFF;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid #666666;
+	box-shadow: 3px 3px 3px 2px #666666;
+	font-size: 22px;
+	text-shadow: 2px 2px 2px #666666;
+}
+
+/**
+ * 状态
+ */
+.undelivery {
+	color: #CD3700;
+}
+.delivery {
+	color: #CAFF70;
+}
+.finish {
+	color: #008B00;
+}
+/*--------------main-right-----end------------*/
+/*--------------main------end------------*/
+
+
+/*--------------footer-----start------------*/
+.footer{
+float:left;
+margin-top:50px;
+width:100%;
+}
+.footer hr{
+float:left;
+width:100%;
+border:2px solid #4cb1ca;
+}
+.footer_pic{
+margin-left:170px;
+}
+.footer img{
+margin:20px 50px;
+}
+.footer_bottom{
+background-color:#4cb1ca;
+text-align:center;
+color:#FFFFFF;
+padding:5px;
+
+}
+.footer_bottom>a{
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.footer_bottom>a:hover{
+	text-decoration: underline;
+}
+/*--------------footer-----end------------*/
+/*--------------alert---------------------*/
+#alertTips{
+	margin: 0;
+	padding: 0;
+	width: 350px;
+	height: 250px;
+	position: absolute;
+	z-index: 10000;
+	border-radius: 10px;
+	box-shadow: 4px 4px 4px black;
+	border: 1px solid #4cb1ca;
+	display: none;
+}
+.alertMain{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+.hostName{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+	font-size: 25px;
+	color: #FFFFFF;
+	background-color: #4cb1ca;
+	cursor: move;
+}
+.closeAlert{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+	font-family: '微软雅黑';
+	color: #FFFFFF;
+	border:1px solid #FFFFFF;
+	font-size: 15px;
+	cursor: pointer;
+	font-weight: 900;
+}
+.closeAlert:hover{
+	box-shadow:0px 0px 0px 2px #FFFFFF;
+}
+.alertContent{
+	text-indent:25px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 9px;
+	width: 90%;
+	height: 180px;
+	border-top: 1px solid #4cb1ca;
+	border-bottom: 1px solid #4cb1ca;
+	overflow: hidden;
+}
+.mask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #000;
+	opacity: 0.4;
+	z-index: 5000;
+	filter: Alpha(opacity=40);
+	display: none;
+}

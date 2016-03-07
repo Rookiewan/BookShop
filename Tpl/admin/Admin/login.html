@@ -1,0 +1,71 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>智慧百屋后台登录</title>
+<!-- Custom Theme files -->
+<link href="{$smarty.const.ADMIN_CSS_URL}login.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+</head>
+<body>
+<!--header start here-->
+	<div class="login">
+		 <div class="login-main">
+		 		<div class="login-top">
+		 			<img src="{$smarty.const.ADMIN_IMG_URL}head-img.png" alt=""/>
+		 			<h1>管理员登录</h1>
+		 			<input type="text" name='adminName' placeholder="管理员账户" required="">
+		 			<input type="password" name='password' placeholder="密码" required="">
+		 			<div class="login-bottom">
+			 			<div class="clear"> </div>
+		 			</div>
+		 			<input type="submit" class='btnLogin' value="登录" />
+		 		</div>
+		 	</div>
+  </div>
+<!--header end here-->
+<div style="text-align:center;">
+</div>
+
+<script src="{$smarty.const.ADMIN_JS_URL}jquery-1.9.1.min.js"></script>
+<script src='{$smarty.const.ADMIN_JS_URL}ajaxRookie_wan.js'></script>
+<script>
+	$(document).ready(function(){
+		$('.btnLogin').click(function(){
+			login();
+		});
+		$("input[name='adminName'],input[name='password']").keydown(function(e){
+			if(e.keyCode==13){
+				login();
+			}
+		});
+	});
+	function login(){
+		var adminName=$("input[name='adminName']").val();
+		var adminPwd=$("input[name='password']").val();
+		if($.trim(adminName)=='' || $.trim(adminPwd)==''){
+			alert('用户名或密码不能空！');
+			return;
+		}
+
+		url='admin/Admin/login';
+		postData={
+			'adminName':adminName,
+			'adminPwd':adminPwd
+		};
+		sendData(url,'post',postData,null,function(data){
+			if(data==1){
+				url=URL+'admin/Admin/index';
+				sessionStorage.setItem('adminName',adminName);
+				window.location.href=url;
+			}else{
+				alert(data);
+			}
+		});
+	}
+</script>
+</body>
+</html>
